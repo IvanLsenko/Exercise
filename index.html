@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Links</title>
+</head>
+<body>
+
+    <script>
+
+        const removeLinks = txt => {
+            // Regex for detention Url in String
+            let detectUrlInStringReg = /(([a-z]+:\/\/)?(([a-z0-9\-]+\.)+([a-z]{2}|aero|arpa|biz|com|coop|edu|gov|info|int|jobs|mil|museum|name|nato|net|org|pro|travel|local|internal))(:[0-9]{1,5})?(\/[a-z0-9_\-\.~]+)*(\/([a-z0-9_\-\.]*)(\?[a-z0-9+_\-\.%=&amp;]*)?)?(#[a-zA-Z0-9!$&'()*+.=-_~:@/?]*)?)(\s+|$)/gi;
+
+            //Return Modified String
+            return txt.replace(detectUrlInStringReg, "Private Url ");
+        }
+
+        console.log(removeLinks('You Can find me on exaple1.ru and on example3.com or on  https://google.com '))
+
+    </script>
+
+</body>
+</html>
